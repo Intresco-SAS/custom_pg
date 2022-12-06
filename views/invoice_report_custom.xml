@@ -31,7 +31,7 @@
             
             <xpath expr="//div[@id='new_information']" position="replace">
                 <div class="row" style="font-size:12px;border:1px solid black" id="new_information">
-                    <div class="col-4">
+                    <div class="col-5">
                         <b> INFO. CLIENTE:</b> <br/>
                         <b><span t-field="o.partner_id.name"/>
                             <t t-if="o.partner_shipping_id and (o.partner_shipping_id != o.partner_id)">
@@ -89,7 +89,7 @@
                             </div>
                         </div>
                     </div>
-                    <div name="QR_code" class="col-3" style="margin-top: 5px;">
+                    <div name="QR_code" class="col-2" style="margin-top: 5px;margin-left: -25px;">
                         <t t-if="o.diancode_id and o.diancode_id.QR_code">
                           <img width="100" height="100" class="media-object" t-att-src="image_data_uri(o.diancode_id.QR_code)"/>
                         </t>
@@ -97,7 +97,7 @@
                           <img width="100" height="100" class="media-object" t-att-src="image_data_uri(o.QR_code_ds)"/>
                         </t>
                         <t t-else=""/>
-                      </div>
+                    </div>
                 </div>
             </xpath>
 
